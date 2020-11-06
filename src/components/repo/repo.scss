@@ -1,0 +1,8 @@
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-group-item + .list-group-item {
+  border-top-width: 1px;
+}
