@@ -13,6 +13,7 @@ const Main = () => {
   const currentPage = useSelector(state => state.repos.currentPage)
   const totalCount = useSelector(state => state.repos.totalCount)
   const perPage = useSelector(state => state.repos.perPage)
+  const isFetchError = useSelector(state => state.repos.isFetchError)
   const [searchValue, setSearchValue] = useState("")
   const pagesCount = Math.ceil(totalCount/perPage)
   const pages = []
@@ -29,6 +30,12 @@ const Main = () => {
 
   return (
     <div>
+      {
+        isFetchError &&
+        <div className="alert alert-danger" role="alert">
+          Произошла ошибка! Пожалуйста, обновите страницу!
+        </div>
+      }
       <div className="input-group mt-4 mb-4 search">
         <input type="text"
                className="form-control search-name"

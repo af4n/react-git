@@ -17,10 +17,10 @@ const Repo = (props) => {
           Количество звезд: {repo.stargazers_count}
         </div>
       </div>
-      <div className="repo-last-commit text-right">
+      <div className="repo-last-commit">
         Последний коммит: {repo.updated_at}
       </div>
-      <div className="text-right">
+      <div>
         <a href={repo.html_url} className="repo-link ">
           Ссылка на репозиторий: {repo.html_url}
         </a>

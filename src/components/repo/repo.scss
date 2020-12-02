@@ -1,8 +1,18 @@
 .repo-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.repo-header-name a {
+  font-weight: bold;
+  color: #212529;
 }
 
 .list-group-item + .list-group-item {
   border-top-width: 1px;
+}
+
+.repo {
+  border-radius: 0.25rem;
 }

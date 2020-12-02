@@ -15,15 +15,17 @@ const Card = (props) => {
 
   return (
     <div>
-      <button onClick={() => props.history.goBack()} class="back-btn">
-        BACK
+      <button onClick={() => props.history.goBack()} class="back-btn btn btn-secondary">
+        Назад
       </button>
       <div className="card">
         <img src={repo.owner.avatar_url} alt="" />
+        <hr/>
         <div className="name">{repo.name}</div>
         <div className="stars">{repo.starzers_count}</div>
       </div>
-      <div>
+      <div className="contributors">
+        <span>Авторы:</span>
         {contributors.map((c, index) => (
           <div>
             {index + 1}. {c.login}
